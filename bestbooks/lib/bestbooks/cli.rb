@@ -1,4 +1,4 @@
-class Bestbooks::cli
+class Bestbooks::CLI
 
   def call
       puts "Welcome to Bestbooks!Your list of best sellers in Italian!"
