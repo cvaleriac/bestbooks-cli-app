@@ -1,7 +1,7 @@
 class Bestbooks::cli
 
   def call
-      puts "Welcome to Bestbooks!"
+      puts "Welcome to Bestbooks!Your list of best sellers in Italian!"
       list_books
       menu
     end
@@ -15,14 +15,14 @@ class Bestbooks::cli
     end
 
     def menu
-      puts "Type a number to learn more about a book, LIST to go back to the list, or type EXIT."
+      puts "Type a number to learn more about a book, BACK to go back to the list, or type EXIT."
       input = gets.strip.downcase
       if input.to_i > 0 && input.to_i < 11
         puts "#{@book[input.to_i-1].description}"
       menu
       elsif input == "exit"
         exit_message
-      elsif input == "list"
+      elsif input == "back"
         list_books
         menu
       else
