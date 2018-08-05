@@ -1,4 +1,4 @@
-class Bestbooks::CLI
+class CLI
 
   def call
       puts "Welcome to Bestbooks!Your list of best sellers in Italian!"
@@ -7,7 +7,7 @@ class Bestbooks::CLI
     end
 
     def list_books
-      @book = Bestbooks::Scraper
+      @book = Bestbooks::Scraper.scrape_books
       puts "Best Sellers List"
       @book.each.with_index(1) do |book, i|
         puts "#{i}. #{book.title} - #{book.author}"

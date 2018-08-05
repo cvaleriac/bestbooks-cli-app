@@ -2,7 +2,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'pry'
 
-class Bestbooks::Scraper
+class Scraper
    @@doc = Nokogiri::HTML(open("https://www.mondadoristore.it/Best-Seller-libri/gr-308/"))
 
    def self.scrape_books
@@ -22,3 +22,4 @@ class Bestbooks::Scraper
 
 end
 binding.pry
+Scraper.new.scrape_books
