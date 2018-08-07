@@ -2,15 +2,13 @@ class CLI
 
   def call
       puts "Welcome to Bestbooks!Your list of best sellers in Italian!"
-      list_books
-      menu
     end
 
     def list_books
       @book = Bestbooks::Scraper.scrape_books
       puts "Best Sellers List"
       @book.each.with_index(1) do |book, i|
-        puts "#{i}. #{book.title} - #{book.author}"
+        puts "#{i}. #{book.title}"
       end
     end
 
@@ -31,7 +29,4 @@ class CLI
       end
     end
 
-    def exit_message
-      puts "Thanks for using Bestbooks!Enjoy your readings!"
-    end
-  end
+end
