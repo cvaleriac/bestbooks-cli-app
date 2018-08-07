@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require './lib/bestbooks'
+require_relative '../lib/bestbooks'
 
 
 Bestbooks::CLI.new.call
