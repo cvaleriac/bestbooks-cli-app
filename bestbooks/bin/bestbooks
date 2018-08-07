@@ -3,4 +3,6 @@
 require_relative '../lib/bestbooks'
 
 
-Bestbooks::CLI.new.call
+CLI.new.call
+list_books
+menu
