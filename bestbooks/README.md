@@ -1,6 +1,6 @@
 # Bestbooks
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bestbooks`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to your new gem! This gem is for language lovers, Italian in this case. This app provides a CLI to the Mondadori Store, where you will find a list of the best seller books in Italian. You will be able to see the title, the author and publishing house from it.
 
 TODO: Delete this and the text above, and describe your gem
 
@@ -22,8 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
+Run: ./bestbooks'cli'app/bin/bestbooks and you will be given the list of top 10 books in Italian. You can then input the number that represents the book you’d like more information on.
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
