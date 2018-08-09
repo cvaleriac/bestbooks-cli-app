@@ -9,7 +9,7 @@ class Scraper
      doc.css(".product-info").each do |product|
           book = Book.new
           book.title = product.css("h3").text
-          book.author = product.css(".title").text
+          book.author = product.css(".secondary-data").text
      end
   end
 end
