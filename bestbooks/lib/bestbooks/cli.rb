@@ -2,14 +2,16 @@ class CLI
 
   def call
       puts "Welcome to Bestbooks!Your list of best sellers in Italian!"
+      Scraper.scrape_books
       list_books
       menu
   end
 
     def list_books
-      @books = Bestbooks::Scraper.scrape_books
-    puts "Best Sellers in Italian"
-    @books.each.with_index(1) do |book, i|
+      @books = Book.all
+      #binding.pry
+      puts "Best Sellers in Italian"
+      @books.each.with_index(1) do |book, i|
       puts "#{i}. #{book.title} - #{book.author}"
     end
     end

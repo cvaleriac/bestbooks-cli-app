@@ -4,5 +4,3 @@ require_relative '../lib/bestbooks'
 
 
 CLI.new.call
-list_books
-menu
