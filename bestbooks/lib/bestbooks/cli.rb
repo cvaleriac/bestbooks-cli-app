@@ -11,7 +11,7 @@ class CLI
       @books = Book.all
       #binding.pry
       puts "Best Sellers in Italian"
-      @books.each.with_index(1) do |book, i|
+      @books.each.with_index(0) do |book, i|
       puts "#{i}. #{book.title} - #{book.author}"
     end
     end
@@ -21,9 +21,9 @@ class CLI
       puts "Type a number to learn more about a book, BACK to go back to the list, or type EXIT."
       input = gets.strip.downcase
       if input.to_i > 0 && input.to_i < 11
-        puts "#{@book[input.to_i-1]}.title"
+        puts "#{@books[input.to_i-1].title} by #{@books[input.to_i-1].author}"
       menu
-      elsif input == "exit"
+    elsif input == "exit"
         exit_message
       elsif input == "back"
         list_books
