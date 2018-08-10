@@ -20,7 +20,7 @@ class CLI
     def menu
       puts "Type a number to learn more about a book, BACK to go back to the list, or type EXIT."
       input = gets.strip.downcase
-      if input.to_i > 1 && input.to_i < 24
+      if input.to_i > 1 && input.to_i < 25
         puts "#{@books[input.to_i-1].description}"
       menu
     elsif input == "exit"
@@ -29,7 +29,7 @@ class CLI
         list_books
         menu
       else
-        puts "Please enter a number from 1 to 23"
+        puts "Please enter a number from 1 to 24"
         menu
       end
     end
