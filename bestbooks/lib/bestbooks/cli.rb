@@ -9,7 +9,6 @@ class CLI
 
     def list_books
       @books = Book.all
-      #binding.pry
       puts "Best Sellers in Italian"
       @books.each.with_index(1) do |book, i|
       puts "#{i}. #{book.title} - #{book.author}"
@@ -20,8 +19,10 @@ class CLI
     def menu
       puts "Type a number to learn more about a book, BACK to go back to the list, or type EXIT."
       input = gets.strip.downcase
-      if input.to_i > 1 && input.to_i < 25
-        puts "#{@books[input.to_i-1].description}"
+      if input.to_i.between?(1, Book.all.count)
+        book = @books[input.to_i-1]
+        Scraper.scrape_details(book)
+        puts book.description
       menu
     elsif input == "exit"
         exit_message
