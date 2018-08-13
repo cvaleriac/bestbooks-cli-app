@@ -30,7 +30,7 @@ class CLI
         list_books
         menu
       else
-        puts "Please enter a number from 1 to 24"
+        puts "Invalid choice! Please enter a number from 1 to 24."
         menu
       end
     end
