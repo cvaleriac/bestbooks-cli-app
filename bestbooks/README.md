@@ -1,6 +1,6 @@
 # Bestbooks
 
-Welcome to your new gem! This gem is for language lovers, Italian in this case. This app provides a CLI to the Mondadori Store, where you will find a list of the best seller books in Italian. You will be able to see the title, the author and publishing house from it.
+Welcome to your new gem! This gem is for language lovers, Italian in this case. This app provides a CLI to the Mondadori Store, where you will find a list of the best seller books in Italian. You will be able to see the title, the author and publishing house from it.Then the app asks for the user input. By typing the number of the list you are interested in, you will get more info about that book.
 
 TODO: Delete this and the text above, and describe your gem
 
